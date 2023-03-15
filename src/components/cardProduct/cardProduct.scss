@@ -1,0 +1,121 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+.cardProduct {
+  background-color: #fff;
+  width: 1fr;
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      padding-top: 30px;
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .details {
+    padding: 40px;
+    .categoryName {
+      padding: 20px 0 0 0;
+      p {
+        color: #9a9ab0;
+        @extend .common-text;
+        font-size: 16px;
+        font-weight: 500;
+        
+      }
+    }
+    .productName {
+      padding: 15px 0 0 0;
+      p {
+        @extend .common-text;
+        font-size: 2em;
+      }
+    }
+    .arrowRight {
+      margin-top: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: #f86338;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .icon {
+        img {
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .cardProduct {
+    background-color: #fff;
+    width: 300px;
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        padding-top: 30px;
+        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardProduct {
+    justify-self: center;
+    .details {
+      .productName {
+        p {
+          @extend .common-text;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500) {
+  .cardProduct {
+    background-color: #fff;
+    width: 100vw;
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .details {
+      padding: 40px;
+      .categoryName {
+        padding: 20px 0 0 0;
+        p {
+          color: #9a9ab0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+      .productName {
+        padding: 15px 0 0 0;
+        p {
+          font-size: 48px;
+        }
+      }
+      
+    }
+  }
+}

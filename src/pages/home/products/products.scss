@@ -1,0 +1,204 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+// style for input field
+.common-input {
+  width: 300px;
+  height: 50px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding-left: 30px;
+  @extend .common-text;
+}
+
+.products {
+  background-color: #f6f5f5;
+  padding-bottom: 150px;
+  .wrapperProducts {
+    padding: 150px 97px 0 97px;
+    .header {
+      text-align: center;
+      p {
+        @extend .common-text;
+        font-size: 48px;
+      }
+    }
+    .wrapperCategoryFilter {
+      .categories {
+        width: 100%;
+        margin: 20px 0;
+        .cat-list {
+          padding: 0 20px;
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          
+        }
+      }
+      .filter {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+        .headFilter {
+          @extend .common-text;
+          font-size: 17px;
+          color: #36b2f8;
+        }
+        .inputSearch {
+          input {
+            @extend .common-input;
+          }
+        }
+        .inputRangePrice {
+          label {
+            @extend .common-text;
+            padding: 0 10px;
+          }
+          .inputPrice {
+            @extend .common-input;
+          }
+        }
+      }
+    }
+    .wrapperProductsCard {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+    }
+  }
+  .btn {
+    margin-top: 70px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .products {
+    .wrapperProducts {
+      .wrapperCategoryFilter {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        .categories {
+          .cat-list {
+            display: block;
+            
+          }
+        }
+        .filter {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          .headFilter {
+            align-self: flex-start;
+          }
+          .inputSearch {
+            input {
+              margin: 5px;
+            }
+          }
+          .inputRangePrice {
+            label {
+              margin: 5px;
+            }
+            .inputPrice {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .products {
+    .wrapperProducts {
+      .wrapperProductsCard {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .products {
+    .wrapperProducts {
+      padding: 150px 15px 0 15px;
+      .header {
+        p {
+          font-size: 39px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .products {
+    .wrapperProducts {
+      .header {
+        p {
+          font-size: 30px;
+        }
+      }
+      .wrapperCategoryFilter {
+        display: flex;
+        flex-direction: column;
+        .categories {
+          .cat-list {
+            display: flex;
+            // .cat-item {
+            //   font-size: 15px;
+            // }
+          }
+        }
+      }
+      .wrapperProductsCard {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .products {
+    .wrapperProducts {
+      .header {
+        p {
+          font-size: 22px;
+        }
+      }
+      .wrapperCategoryFilter {
+        display: flex;
+        flex-direction: column;
+        .categories {
+          .cat-list {
+            display: flex;
+            
+          }
+        }
+      }
+      .wrapperProductsCard {
+        grid-template-columns: 1fr;
+        
+      }
+    }
+  }
+}

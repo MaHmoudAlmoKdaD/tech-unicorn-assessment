@@ -1,0 +1,224 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+// style for buttons
+.common-btn {
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 20px 30px;
+  &:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.4s;
+  }
+}
+
+.singleProduct {
+  .productDetails {
+    padding: 25px 97px 0 97px;
+    .pathOfProduct {
+      p {
+        @extend .common-text;
+        font-size: 24px;
+      }
+    }
+    .details {
+      display: flex;
+      gap: 10px;
+      margin-top: 60px;
+      .leftSide {
+        width: 50%;
+
+        .image {
+          img {
+            width: 80%;
+            height: 50vh;
+          }
+        }
+        .images {
+          display: flex;
+          gap: 15px;
+          img {
+            width: 25%;
+          }
+        }
+      }
+      .rightSide {
+        width: 50%;
+        background-color: #f6f5f5;
+        padding: 10px;
+        marign: 0 40px;
+        .title {
+          p {
+            @extend .common-text;
+            font-size: 62px;
+          }
+        }
+        .rate {
+          margin-top: 15px;
+          img {
+          }
+        }
+        .price {
+          margin-top: 15px;
+          p {
+            @extend .common-text;
+            font-size: 62px;
+            color: #f3692e;
+          }
+        }
+        .detailsProduct {
+          margin-top: 30px;
+          p {
+            @extend .common-text;
+            font-size: 24px;
+          }
+        }
+        .description {
+          .first {
+            @extend .common-text;
+            font-size: 16px;
+            font-weight: 400;
+          }
+          .last {
+            margin-top: 25px;
+            @extend .common-text;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+        .quantityOfProduct {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 30px;
+          .qty {
+            @extend .common-text;
+            font-size: 16px;
+          }
+          input {
+            width: 200px;
+            height: 40px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            padding-left: 30px;
+            @extend .common-text;
+            &::placeholder {
+              @extend .common-text;
+              color: #9a9ab0;
+            }
+          }
+          .note {
+            @extend .common-text;
+            font-size: 16px;
+            color: #f3692e;
+          }
+        }
+        .total {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 25px;
+          p {
+            @extend .common-text;
+            font-size: 16px;
+          }
+        }
+        .buttonDetails {
+          margin-top: 40px;
+          .wishlist {
+            @extend .common-text;
+            @extend .common-btn;
+            background: #fff;
+            color: #f86338;
+            border: 1px solid #f86338;
+          }
+          .addCard {
+            @extend .common-text;
+            @extend .common-btn;
+            margin-left: 20px;
+            background: #f86338;
+            color: #fff;
+            border: 1px solid #f86338;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .singleProduct {
+    .productDetails {
+      .pathOfProduct {
+        p {
+          @extend .common-text;
+          font-size: 20px;
+        }
+      }
+      .details {
+        flex-direction: column;
+        .leftSide {
+          width: 100%;
+          text-align: center;
+          .image {
+            img {
+              width: 80%;
+              height: 50vh;
+            }
+          }
+          .images {
+            justify-content: center;
+
+            img {
+              width: 25%;
+            }
+          }
+        }
+        .rightSide {
+          width: 100%;
+          .title {
+            p {
+              @extend .common-text;
+              font-size: 42px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  
+}
+@media screen and (max-width: 610px) {
+  .singleProduct {
+    .productDetails {
+      padding: 25px 25px 0 25px;
+      .pathOfProduct {
+        p {
+          font-size: 16px;
+        }
+      }
+      .details {
+        .rightSide {
+          .title {
+            p {
+              font-size: 25px;
+            }
+          }
+          .buttonDetails {
+            display: flex;
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}

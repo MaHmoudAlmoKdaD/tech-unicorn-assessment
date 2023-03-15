@@ -1,0 +1,140 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+.welcome {
+  .wrapperWelcome {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    .leftSide {
+      .shape1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 68px;
+        top: 243.92px;
+      }
+      .shape2 {
+        position: absolute;
+        width: 39px;
+        height: 39px;
+        left: 579px;
+        top: 290px;
+      }
+      .shape3 {
+        position: absolute;
+        width: 56.34px;
+        height: 56.34px;
+        left: 1200.88px;
+        top: 290px;
+      }
+      .shape4 {
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: 119px;
+        top: 629px;
+      }
+      .shape5 {
+        position: absolute;
+        width: 59.48px;
+        height: 59.48px;
+        left: 618.89px;
+        top: 690px;
+      }
+      .shape6 {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 1214px;
+        top: 582px;
+      }
+      .shape7 {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 1063px;
+        top: 773px;
+      }
+    }
+    .rightSide {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .header {
+        p {
+          @extend .common-text;
+          font-size: 64px;
+        }
+      }
+      .paragraph {
+        margin-top: 40px;
+        width: 80%;
+        p {
+          @extend .common-text;
+          color: #515151;
+          font-weight: 500;
+        }
+      }
+      .btn {
+        margin-top: 50px;
+       
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .welcome {
+    .wrapperWelcome {
+      width: 100%;
+      text-align: center;
+      .leftSide {
+        display: none;
+      }
+      .rightSide {
+        width: 100vw;
+        justify-content: center;
+
+        .paragraph {
+          //   padding: 0 20px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .welcome {
+    .wrapperWelcome {
+      .rightSide {
+        .header {
+          p {
+            font-size: 44px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .welcome {
+    .wrapperWelcome {
+      .rightSide {
+        .header {
+          p {
+            font-size: 34px;
+          }
+        }
+      }
+    }
+  }
+}

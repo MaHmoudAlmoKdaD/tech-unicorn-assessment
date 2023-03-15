@@ -1,0 +1,111 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+.header {
+  .wrapperHeader {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 25px 97px 0 97px;
+    .leftSide {
+      align-items: start;
+      p {
+        width: 152px;
+        height: 47px;
+        @extend .common-text;
+        font-size: 39px;
+
+        color: #f86338;
+      }
+    }
+    .rightSide {
+      display: flex;
+      justify-content: flex-end;
+
+      .wrapperContent {
+        margin-left: 20px;
+        .content {
+          display: flex;
+          align-items: center;
+          &:hover {
+            cursor: pointer;
+            color: #808099;
+          }
+          .icon {
+            height: 22px;
+            width: 22px;
+          }
+          .text {
+            @extend .common-text;
+            font-size: 16px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header {
+    .wrapperHeader {
+      padding: 25px 25px 0 25px;
+      .rightSide {
+        height: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  .header {
+    .wrapperHeader {
+      .leftSide {
+        p {
+          font-size: 19px;
+        }
+      }
+      .rightSide {
+        height: 100%;
+        .wrapperContent {
+          .content {
+            .text {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    .wrapperHeader {
+      padding: 25px 15px 0 15px;
+      .leftSide {
+        p {
+          font-size: 19px;
+        }
+      }
+      .rightSide {
+        .wrapperContent {
+          .content {
+            .text {
+              width: 45px;
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

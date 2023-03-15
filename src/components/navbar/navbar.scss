@@ -1,0 +1,107 @@
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+// style-for-all-list-in-this-component
+.common-list-style {
+  width: 80%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: #f6f5f5;
+  .wrapperNavbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 25px 97px 25px 97px;
+    align-items: center;
+    .nav-pages {
+      .nav-list {
+        @extend .common-list-style;
+        .nav-item {
+          @extend .common-text;
+          &:hover {
+            cursor: pointer;
+            color: #f86338;
+          }
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+    .search {
+      height: 50px;
+      .searchInput {
+        width: 573px;
+        height: 50px;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        padding-left: 30px;
+        @extend .common-text;
+        &::placeholder {
+          @extend .common-text;
+          color: #9a9ab0;
+        }
+      }
+    }
+    .nav-profile {
+      display: flex;
+      justify-content: flex-end;
+      .profile-list {
+        @extend .common-list-style;
+
+        .profile-item {
+          i {
+            font-size: 24px;
+            color: #11142d;
+            font-weight: bold;
+          }
+          .numberOfShopNotification {
+            background-color: #f86338;
+            position: relative;
+            top: -15px;
+            left: -7px;
+            padding: 5px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .common-list-style {
+    width: 100%;
+  }
+  .navbar {
+    .wrapperNavbar {
+      display: flex;
+      flex-direction: column;
+      .nav-pages {
+        width: 100%;
+      }
+      .search {
+        margin-top: 20px;
+        .searchInput {
+          width: 90vw;
+        }
+      }
+      .nav-profile {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+}

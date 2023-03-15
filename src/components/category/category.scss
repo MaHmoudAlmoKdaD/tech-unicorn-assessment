@@ -1,0 +1,39 @@
+// font family from google
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+// style-for-all-texts-in-this-component
+.common-text {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+}
+
+.cat-item {
+  @extend .common-text;
+  color: #aeaebb;
+  font-size: 24px;
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:active {
+      color: #f86338;
+    }
+    &:hover {
+      color: #f86338;
+    }
+  }
+}
+.active{
+  color: #f86338;
+}
+@media screen and (max-width: 1300px) {
+  .cat-item {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 610px) {
+  .cat-item {
+    font-size: 15px;
+  }
+}
