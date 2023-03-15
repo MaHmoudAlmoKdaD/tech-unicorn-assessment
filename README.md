@@ -54,4 +54,4 @@
 - You can specify the category also from the categories
 - I have taken great care to make the app responsive from 2500px to 350px
 
- Run this assessment on your PC `npm install` Then `npm start`
+ Run this app on your PC `npm install` Then `npm start`
