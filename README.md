@@ -49,7 +49,7 @@
 - search input.
 - 2 price input, to specify the products that will appear depending on the price.
 #### what is the expected:
-- The products bearing this character or the words will appear in their title when entering any character.
+- The products have this character or the words will appear in their title when entering any character.
 - Products in this range will appear in relation to the price
 - You can specify the category also from the categories
 - I have taken great care to make the app responsive from 2500px to 350px
