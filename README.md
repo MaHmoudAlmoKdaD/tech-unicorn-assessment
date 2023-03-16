@@ -29,7 +29,7 @@
             |   shape   |
             |   |       shape1.svg 
             |   |
-            |pages: each separate page will navigate to it
+            pages: each separate page will navigate to it
             |   |
             |   home            |: home consists of components 
             |   |               Home.Jsx
