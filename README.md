@@ -10,7 +10,7 @@
             |
             App.js: The path of pages
             |
-            |components : reusable components
+            |   components : reusable components
             |   |
             |   heder   |
             |   |       Header.jsx
@@ -20,7 +20,7 @@
             |   |       Button.jsx
             |   |       Button.scss
             |   |
-            |images
+            |   images
             |   |
             |   icon    |
             |   |       heartIcon.svg
